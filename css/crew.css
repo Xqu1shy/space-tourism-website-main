@@ -1,0 +1,258 @@
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+
+:root {
+    --black: hsl(230, 35%, 7%);
+    --white: hsl(0, 0%, 100%);
+    --lavander: hsl(231, 77%, 90%);
+    --filter-color: hsla(231, 76%, 90%, 0.116);
+    --span-line: hsla(231, 76%, 90%, 0.5);
+  }
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../assets/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+@media (max-width: 951px) {
+    body {
+        background-image: url(../assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-image: url(../assets/crew/background-crew-mobile.jpg);
+    }
+}
+
+                        /* crew layout */
+    
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin: 3em auto 0 auto;
+}
+
+
+.crew-pic {
+    width: 100%;
+    max-width: 445px;
+    margin: 3rem auto;
+    border-bottom: 2px solid var(--filter-color);
+    text-align: center;
+}
+
+.crew-pic img {
+    width: 60%;
+}
+
+.crew-info-and-slider {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 2em 0;
+}
+
+.slider button {
+    width: 1.5vw;
+    height: 1.5vw;
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 15px;
+    max-height: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: var(--filter-color);
+}
+
+.slider button:hover {
+    background-color: var(--span-line);
+}
+
+.slider button.current-crew {
+    background-color: var(--white);
+}
+
+.crew-info h4 {
+    margin-bottom: 0.5em;
+}
+
+.crew-info h1 {
+    margin-bottom: 1em;
+}
+
+/* typo */
+
+main h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4.75px;
+    color: var(--white);
+    font-size: clamp(1rem, 1.8vw, 1.75rem);
+    text-align: center;
+}
+
+main span {
+    color: var(--span-line);
+    margin-right: 1em;
+    font-weight: bold;
+}
+
+.crew-info h4 {
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    color: var(--span-line);
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-align: center;
+}
+
+.crew-info h1 {
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    color: var(--white);
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    text-align: center;
+}
+
+.crew-info p {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--lavander);
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    line-height: 1.75em;
+    text-align: center;
+}
+
+main h5,
+.crew-info h4,
+.crew-info h1,
+.crew-info p {
+    font-weight: 400;
+}
+
+
+/* breakpoint tablet */
+
+@media (min-width: 652px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .crew-pic {
+        order: 3;
+        margin: 0 auto;
+    }
+
+    .crew-pic img {
+        width: 75%;
+    }
+
+    .crew-info-and-slider {
+        max-width: 457px;
+        margin-top: 4em;
+    }
+
+    .slider {
+        order: 4;
+        margin: 3em 0;
+    }
+
+    .crew-info h1 {
+        margin-bottom: 0.5em;
+    }
+
+/* typo */
+
+    main h5 {
+        text-align: start;
+    }
+
+
+}
+
+/* breakpoit for desktop */
+
+@media (min-width: 955px) {
+
+    body {
+        min-height: 96vh;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        height: 84.5vh;
+    }
+
+    .wrapper h5 {
+        position: absolute;
+        top: 2.5em;
+    }
+
+    .crew-pic {
+        width: 50%;
+        max-width: none;
+        margin: 4em 0 0 0;
+        border: none;
+
+        /* align-self: end; */
+    }
+
+    .crew-pic img {
+        width: 100%;
+        max-width: 568px;
+    }
+
+    .crew-info-and-slider {
+        width: 50%;
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .bio {
+        max-width: 489px;
+    }
+
+    .slider {
+        justify-content: flex-start;
+        position: absolute;
+        bottom: 2em;
+    }
+
+    /* typo */
+
+    .crew-info h4,
+    .crew-info h1,
+    .crew-info p {
+        text-align: start;
+    }
+
+
+}

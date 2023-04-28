@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/destination.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <script defer src="./js/responsiveNav.js"></script>
+  <script defer src="./js/destinationDomChange.js"></script>
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <header>
+
+    <button class="burger" id="burger">
+      <img src="./assets/shared/icon-hamburger.svg" alt="" id="burger-swap">
+    </button>
+
+    <div class="logo">
+      <img src="./assets/shared/logo.svg" alt="">
+    </div>
+
+    <nav class="primary-nav">
+      <div class="nav-link"><p><span>00</span><a href="./index.html">Home</a></p></div>
+      <div class="nav-link page-active"><p><span>01</span><a href="./destination-moon.html">Destination</a></p></div>
+      <div class="nav-link"><p><span>02</span><a href="./crew-commander.html">Crew</a></p></div>
+      <div class="nav-link margin-right"><p><span>03</span><a href="./technology-vehicle.html">Technology</a></p></div>
+    </nav>
+
+  </header>
+
+  <main class="wrapper">
+    <h5><span>01</span>Pick your destination</h5>
+
+    <div class="planet-container">
+
+      <div class="planet-image">
+        <img src="./assets/destination/image-moon.webp" alt="" id="planet-img">
+      </div>
+
+      <div class="r-side">
+        <div class="description-container">
+
+          <div class="planet-selector-links">
+            <button id="moon" class="button planet-description-not-active planet-description-active">Moon</button>
+            <button id="mars" class="button planet-description-not-active">Mars</button>
+            <button id="europa" class="button planet-description-not-active">Europa</button>
+            <button id="titan" class="button planet-description-not-active">titan</button>
+          </div>
+          <h1 id="change-h1">Moon</h1>
+          <p id="change-p">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+            regain perspective and come back refreshed. While you’re there, take in some history 
+            by visiting the Luna 2 and Apollo 11 landing sites.
+          </p>
+        </div>
+        <div class="avg-est-container">
+          <div class="distance-travel">
+            <h6>Avg. distance</h6>
+            <p id="change-avg">384,400 km</p>
+          </div>
+          <div class="distance-travel">
+            <h6>Est. travel time</h6>
+            <p id="change-est">3 days</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+  <!-- 00 Home
+  01 Destination
+  02 Crew
+  03 Technology
+
+  01 Pick your destination
+
+  Moon
+  Mars
+  Europa
+  Titan
+
+  Moon
+
+  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+  regain perspective and come back refreshed. While you’re there, take in some history 
+  by visiting the Luna 2 and Apollo 11 landing sites.
+
+  Avg. distance
+  384,400 km
+
+  Est. travel time
+  3 days -->
+</body>
+</html>

@@ -1,0 +1,226 @@
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+
+:root {
+    --black: hsl(230, 35%, 7%);
+    --white: hsl(0, 0%, 100%);
+    --lavander: hsl(231, 77%, 90%);
+    --filter-color: hsla(231, 76%, 90%, 0.116);
+    --span-line: hsla(231, 76%, 90%, 0.5);
+  }
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../assets/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@media (max-width: 951px) {
+    body {
+        background-image: url(../assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-image: url(../assets/crew/background-crew-mobile.jpg);
+    }
+}
+
+
+                        /* tech layout */
+
+main h5 {
+    margin: 3em 0;
+}
+
+.tech-pic img {
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.button {
+    width: 5vw;
+    height: 5vw;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--span-line);
+    margin: 2em 0;
+    cursor: pointer;
+}
+
+button.tech-active {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.button:hover {
+    border: 1px solid var(--white);
+}
+
+.info {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* typo */
+
+main h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4.75px;
+    color: var(--white);
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    text-align: center;
+}
+
+main span {
+    color: var(--span-line);
+    margin-right: 1em;
+    font-weight: bold;
+}
+
+main h4 {
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--span-line);
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    letter-spacing: 2.36px;
+    text-align: center;
+}
+
+main h1 {
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    color: var(--white);
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    text-align: center;
+}
+
+main p {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--lavander);
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    line-height: 1.75em;
+    text-align: center;
+}
+
+main h5,
+main h4,
+main h1,
+main p
+.button {
+    font-weight: 400;
+}
+
+main h1,
+main h4 {
+    margin-bottom: 1em;
+}
+
+.button {
+    font-family: 'Bellefair', serif;
+    color: var(--white);
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+
+/* breakpoit tablet */
+
+@media (min-width: 650px) {
+    .info {
+        max-width: 458px;
+    }
+
+    main h5 {
+        text-align: start;
+        margin-left: 3em;
+    }
+}
+
+/* breakpoit destop */
+
+@media (min-width: 950px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .wrapper {
+        width: 85%;
+        margin: 0 0 0 auto;
+        min-height: 527px;
+    }
+
+    main h5 {
+        margin: 2em 0;
+    }
+
+    .tech-slider-info {
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tech-pic {
+        order: 2;
+        width: 40%;
+        max-width: 515px;
+        height: 100%;
+    }
+
+    .tech-pic img {
+        height: 100%;
+    }
+
+    .slider-and-info-container {
+        display: flex;
+        gap: 3em;
+        width: 60%;
+    }
+
+    .slider {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 25vw;
+        margin: 0;
+    }
+
+    /* typo */
+
+    main h1,
+    main h4,
+    main p {
+        text-align: start;
+    }
+
+    main h1 {
+        margin-bottom: 0;
+    }
+
+}
